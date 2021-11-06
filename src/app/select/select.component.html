@@ -1,0 +1,10 @@
+<!-- No sure if this is an efficient way, but it does the job right -->
+<!-- This approach is useful only when the values are static and doesn't change frequently -->
+
+<select *ngIf="currentRoute === 'first'" name="dropItems" id="dropItems" class="bg-white p-4 border border-gray-200">
+    <option *ngFor="let item of firstRouteItems" [value]="item.id">{{item.item}}</option>
+</select>
+
+<select *ngIf="currentRoute === 'second'" name="dropItems" id="dropItems" class="bg-white p-4 border border-gray-200">
+    <option *ngFor="let item of secondRouteItems" [value]="item.id">{{item.item}}</option>
+</select>
